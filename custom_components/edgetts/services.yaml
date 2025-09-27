@@ -1,0 +1,45 @@
+speak:
+  name: Speak with EdgeTTS
+  description: Convert text to speech using Microsoft EdgeTTS
+  fields:
+    entity_id:
+      name: Media Player
+      description: Media player entity to play the TTS on
+      required: true
+      selector:
+        entity:
+          domain: media_player
+    message:
+      name: Message
+      description: Text to convert to speech
+      required: true
+      selector:
+        text:
+          multiline: true
+    voice:
+      name: Voice
+      description: Voice to use for TTS
+      required: false
+      default: "vi-VN-NamMinhNeural"
+      selector:
+        select:
+          options:
+            - "en-US-JennyNeural"
+            - "en-US-GuyNeural"
+            - "en-GB-LibbyNeural"
+            - "vi-VN-NamMinhNeural"
+            - "vi-VN-HoaiMyNeural"
+            - "zh-CN-XiaoxiaoNeural"
+            - "ja-JP-NanamiNeural"
+            - "ko-KR-SunHiNeural"
+            - "fr-FR-DeniseNeural"
+            - "de-DE-KatjaNeural"
+            - "es-ES-ElviraNeural"
+            - "it-IT-ElsaNeural"
+    cache:
+      name: Enable Caching
+      description: Cache the generated audio file
+      required: false
+      default: true
+      selector:
+        boolean:

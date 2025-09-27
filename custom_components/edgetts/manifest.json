@@ -1,0 +1,18 @@
+{
+  "domain": "edgetts",
+  "name": "EdgeTTS",
+  "codeowners": ["@kuteo"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/kuteo/HA-EdgeTTS",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/kuteo/HA-EdgeTTS/issues",
+  "requirements": [
+    "edge-tts==6.1.12",
+    "pydub==0.25.1",
+    "flask==3.0.0",
+    "requests==2.31.0"
+  ],
+  "version": "1.0.0"
+}
