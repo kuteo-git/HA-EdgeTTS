@@ -39,10 +39,10 @@ def send_text_to_tts_server(
         if response.status_code == 200:
             return response.content
         else:
-            log.error(f"❌ Failed with status {response.status_code}: {response.text}")
+            log.error(f"❌ [edge_tts] Failed with status {response.status_code}: {response.text}")
             return None
     except Exception as e:
-        log.error(f"❌ Exception occurred: {e}")
+        log.error(f"❌ [edge_tts] Exception occurred: {e}")
         return None
 
 def send_text_to_edge_tts_server(
@@ -66,10 +66,10 @@ def send_text_to_edge_tts_server(
         if response.status_code == 200:
             return response.content
         else:
-            log.error(f"❌ Failed with status {response.status_code}: {response.text}")
+            log.error(f"❌ [edge_tts] Failed with status {response.status_code}: {response.text}")
             return None
     except Exception as e:
-        log.error(f"❌ Exception occurred: {e}")
+        log.error(f"❌ [edge_tts] Exception occurred: {e}")
         return None
 
 
